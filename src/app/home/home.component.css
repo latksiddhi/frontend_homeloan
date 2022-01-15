@@ -1,0 +1,311 @@
+
+    .bimage {
+        background-image: url("https://m.economictimes.com/thumb/msid-83033066,width-1200,height-900,resizemode-4,imgsize-202355/home-loan-above-rs-30-lakh-to-rs-75-lakh.jpg"); /* The image used */
+        background-color: #cccccc; /* Used if the image is unavailable */
+        height: 500px; /* You must set a specified height */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+      }
+
+.container{
+    display:contents;
+    justify-content:center;
+    padding-top: 21vh;     
+    }
+    .bimage1 {
+        background-image: url("https://cdn.dnaindia.com/sites/default/files/styles/full/public/2020/12/25/945565-homeloan-istock.jpg"); /* The image used */
+        background-color: #cccccc; /* Used if the image is unavailable */
+        /* You must set a specified height */
+       
+        background-position:centre; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: 1600px 600px; /* Resize the background image to cover the entire container */
+        margin: auto;
+       
+      }
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 12%;
+    height: 120px;
+    background-color:#66D3FA;
+}
+.logo {
+    margin-left: 7vw;
+}
+
+.nav_bar {
+    padding: 25px;
+}
+
+.nav_list{
+    display: flex;
+    list-style: none;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+li {
+    padding: 0 50px;
+
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40vh;
+    height: 120vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.container2 {
+    margin-left: 13vw;
+     padding-top: 10vh; 
+
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+button {
+    padding: 15px;
+    background-color: aquamarine;
+    color: blue;
+    border: none;
+    border-radius: 50px;
+
+}
+button:hover{
+    background-color: yellowgreen;
+}
+
+.right_div {
+    margin: 11vw;
+    width: 35vw;
+    height: 90vh;
+    align-items: center;
+
+}
+
+.payment {
+    text-align: center;
+    align-items: center;
+    padding-left:90px;
+    padding-top: 80px;
+
+}
+
+.amount_details {
+    padding: 33px;
+}
+
+label {
+    color: gray;
+    line-height: 5vh;
+
+}
+
+input {
+    background: aliceblue;
+    width: 25vw;
+    height: 7vh;
+}
+
+.get_loan {
+    width: 25vw;
+    background-color: #3e467b;
+    color: #ffffff;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 150px;
+}
+
+.stepp {
+    width: 23vw;
+}
+
+.same_icon {
+    margin-left: 48px;
+    padding: 40px;
+    border-radius: 50px;
+    background-color: lightblue;
+}
+
+.application {
+    padding: 50px 58px 50px 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.getmoney {
+    color: white;
+    text-align: center;
+}
+
+.application_main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 112px;
+    margin-top: 37px;
+    align-items: center;
+}
+
+.image {
+    height: 208px;
+}
+
+.application_content {
+    color: white;
+}
+
+.manager {
+    padding: 50px 58px 50px 100px;
+}
+.getcall{
+    text-align: center;
+}
+.manager_main {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 112px;
+    margin-top: 37px;
+    align-items: center;
+}
+.image1{
+    height: 208px;
+}
+.approval{
+    padding: 50px 58px 50px 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.why_choose{
+    padding: 50px 58px 50px 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+.clicks{
+    display: flex;
+    align-items: center;
+}
+.click_main{
+    display: flex;
+    padding:0 128px;
+    justify-content: space-between;
+    color: white;
+    margin-top: 32px;
+}
+.text{
+    color: white;
+    text-align: center;
+}
+.check_icon{
+    margin-right: 48px;
+    font-size: 38px !important;
+    color: aqua;
+}
+
+.choose_us{
+    padding: 19px 85px;
+}
+.choose_text{
+    text-align: center;
+    padding-top:80px;
+}
+.combine3{
+    display: flex;
+    justify-content: space-between;
+    padding: 108px;
+    padding-top: 80px;
+    border: solid;
+}
+.divs{
+    background-color: lightgray;
+    padding: 41px 67px;
+    margin-right: 51px;
+    border: solid;
+}
+.howit{
+    color: rgb(11 13 103);
+    font-size: 21px;
+
+}
+
+.address{
+    background-color: #2f2f2f;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 147px;
+}
+.address_info{
+    display: flex;
+}
+.street{
+    margin-right: 85px;
+}
+
+.footer{
+    background-color: #1d1d1d;
+    padding: 30px 147px;
+}
+.footer_main{
+    display: flex;
+    justify-content: space-between;
+}
+.img_footer{
+    height: 87px;
+}
+.hours_list{
+    list-style: none;
+    padding: 0;
+    line-height: 33px;
+    font-weight: bold;
+}
+.hrs{
+    padding: 0px;
+    color: white;
+}
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 7px 68px;
+}
+.policy{
+    color: white;
+}
+.media_ul{
+    display: flex;
+    list-style: none;
+}

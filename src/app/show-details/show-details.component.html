@@ -1,0 +1,235 @@
+ 
+<div class="p-3 mb-2 bg-light text-dark">
+
+  <form  class="was-validated" #myForm="ngForm" (ngSubmit)="saveData()" >
+
+    <h1 >Registration Form</h1>
+  <div class="row">
+    <div class="col">
+   <input type="text" class="form-control" id="fname" name="firstname" #un="ngModel" placeholder="Enter FirstName"  [(ngModel)]="preview.firstname" required  pattern="([A-Za-z]+(['|\-|\s]?[A-Za-z]+)*)+">
+    <div class="invalid-feedback">
+   <div  *ngIf="un.invalid && (un.dirty||un.touched) && un.errors?.required">
+    First Name is required</div>
+  
+    <div *ngIf="un.errors?.pattern">First Name Is Invalid</div>
+  
+  </div>
+  </div>
+   
+   
+   <div class="col">
+     <input type="text" class="form-control" id="laname" name="lastname" #ul="ngModel" placeholder="Enter LastName" [(ngModel)]="preview.lastname" required pattern="([A-Za-z]+(['|\-|\s]?[A-Za-z]+)*)+">
+     <div class="invalid-feedback">
+     <div  *ngIf="ul.invalid && (ul.dirty||ul.touched) && ul.errors?.required ">
+    Last Name is required
+    </div>
+
+      <div *ngIf="ul.errors?.pattern">Last Name Is Invalid</div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col">
+  <p class="lead">Nationality</p>    
+  <select class="form-control" aria-label="Default select example" name="nationality"  #unation="ngModel" id="nation" [(ngModel)]="preview.nationality"required>
+    <option class="dropdown-item" value="Indian">Indian</option>
+    <option class="dropdown-item" value="American">American</option>
+    <option class="dropdown-item" value="Canadian">Canadian</option>
+    </select>
+    <div class="invalid-feedback">
+    <div  *ngIf="unation.invalid && (unation.dirty||unation.touched) && unation.errors?.required" >
+      Nationality is required</div>
+    </div>
+  </div>
+      <div class="col">
+        
+ <p class="lead">Gender </p>
+  <div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" id="gender" name="gender" #ugender="ngModel" value="Male" [(ngModel)]="preview.gender"  required>Male
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="radio" id="gender" name="gender" #ugender="ngModel" value="Female" [(ngModel)]="preview.gender"  required>Female
+  </div>
+  <div class="invalid-feedback">
+  <div  *ngIf="ugender.invalid && (ugender.dirty||ugender.touched) && ugender.errors?.required" >
+Gender is required
+  </div>
+   </div>
+ 
+</div>
+</div>
+
+
+
+  
+  <br>
+  <div class="row">
+    <div class="col">
+<p class="lead">Residence Address</p>
+    <textarea id="address" class="form-control" id="exampleFormControlInput1" name="address"  #uadd="ngModel"  placeholder="(Apartment,FloorNumber)" [(ngModel)]="preview.address" required></textarea>
+    <div class="invalid-feedback">
+    <div  *ngIf="uadd.invalid && (uadd.dirty||uadd.touched) && uadd.errors?.required" >
+      Address Required
+      </div>
+    </div>
+    </div>
+  
+    <br>
+  <div class="col">
+  <p class="lead">Phone Number</p>
+      <input type="text" id="phone" class="form-control" name="phonenumber" id="exampleFormControlInput1" #uphone="ngModel" placeholder="Enter  PhoneNumber"[(ngModel)]="preview.phonenumber" required pattern="^-?[0-9][0-9,\.]+$">
+      <div class="invalid-feedback">
+      <div  *ngIf="uphone.invalid && (uphone.dirty||uphone.touched) && uphone.errors?.required" >
+      Phone Number  is required</div>
+      <div *ngIf="uphone.errors?.pattern">Phone Number  is Invalid</div>
+           </div>
+   </div>
+  </div>
+ 
+   <br>
+   <div class="row">
+     <div class="col">
+     <p class="lead">Date Of Birth</p>
+       <input type="date" name="dateofbirth" class="form-control" #udob="ngModel" [(ngModel)]="preview.dateofbirth" required>
+       <div class="invalid-feedback">
+       <div  *ngIf="udob.invalid && (udob.dirty||udob.touched) && udob.errors?.required" >
+DOB IS REQUIRED
+       </div>
+      </div>
+     </div>
+
+   
+  
+   <div class="col">
+    <p class="lead">Password</p>
+   <input type="password" name="upass" class="form-control" #up="ngModel" placeholder="Passw@123" [(ngModel)]="preview.password" required pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$">
+   <div class="invalid-feedback">
+    <div  *ngIf="up.invalid && (up.dirty||up.touched) && up.errors?.required" >
+    Password  is required</div>
+    <div *ngIf="up.errors?.pattern">( "Password Requires At least one upper case, lower case, one digit, one special character, Min 8. Characters" )
+      </div>
+         </div>
+   </div>
+   </div>
+   <br>
+   <br>
+   <div class="row">
+     <div class="col">
+  
+      <p class="lead">Email Address</p>
+   <input type="text" id="email" name="emailid"  class="form-control" #ue="ngModel" placeholder="example@gmail.com" [(ngModel)]="preview.emailid" required   pattern="[a-z0-9._%+-]+@[a-z0-9-]+\.[a-z]{2,4}$" >
+    <div class="invalid-feedback">
+   <div  *ngIf="ue.invalid && (ue.dirty||ue.touched) && ue.errors?.required">
+  Email is required</div>
+    <div *ngIf="ue.errors?.pattern">
+      Incorrect email</div>
+      
+  </div>
+</div>
+    <br>
+    <div class="col">
+   <p class="lead">Annual Income</p>
+   <input type="text" id="income" name="annualincome" class="form-control" #uincome="ngModel"  placeholder="Enter Annual Income" [(ngModel)]="preview.annualincome" required pattern="^[1-9][0-9]*$">
+   <div class="invalid-feedback">
+    <div  *ngIf="uincome.invalid && (uincome.dirty||uincome.touched) && uincome.errors?.required">
+    Income is required</div>
+<div *ngIf="uincome.errors?.pattern">
+Income Invalid
+</div>
+  </div>
+
+  
+  </div>
+</div>
+
+<br>
+<br>
+  
+   <div class="row">
+     <div class="col">
+ <p class="lead">Employment Type</p>
+   <select class="form-control" aria-label="Default select example" name="typeofemployement"  #uetype="ngModel" id="nation" [(ngModel)]="preview.typeofemployement" required>
+    <option class="dropdown-item" value="Full-time">Full-time</option>
+    <option class="dropdown-item" value="Part-Time">Part-Time</option>
+    <option class="dropdown-item" value="Seasonal">Seasonal</option>
+    </select>
+    <div class="invalid-feedback">
+    <div  *ngIf="uetype.invalid && (uetype.dirty||uetype.touched) && uetype.errors?.required">
+     Employment Type is required</div>
+     
+    
+    </div>
+  </div>
+    <br>
+
+    <div class="col">
+      <p class="lead">Employer Name</p>
+      <input type="text" name="employername" class="form-control" #uename="ngModel" placeholder="Enter Employer Name" [(ngModel)]="preview.employername"> 
+      <div class="invalid-feedback">
+        <div  *ngIf="uename.invalid && (uename.dirty||uename.touched) && uename.errors?.required">
+        Employer Name is required</div>
+    <div *ngIf="uename.errors?.pattern">
+    Income Invalid
+    </div>
+      </div>
+    </div>
+    
+  
+   
+    <div class="col">
+ <p class="lead">Retirement Age</p>
+  <input type="text" id="age" name="retirementage" class="form-control" #uage="ngModel" placeholder="Enter Retirement Age" [(ngModel)]="preview.retirementage" required pattern="^(0?[1-9]|[1-9][0-9]|[1][1-9][1-9]|100)">
+  <div class="invalid-feedback">
+    <div  *ngIf="uage.invalid && (uage.dirty||uage.touched) && uage.errors?.required" >
+    AGE is required
+  </div>
+  <div *ngIf="uage.errors?.pattern">
+    AGE INVALID
+</div>
+  </div>
+   
+   
+   </div>
+   <br>
+   </div>
+   <br>
+   <br>
+  
+ 
+     <div class="col">
+      <p class="lead">Organization Type</p>
+      <select class="form-control" aria-label="Default select example" name="organizationtype"  #uotype="ngModel" id="organizationtype" [(ngModel)]="preview.organizationtype" required>
+        <option class="dropdown-item" value="Chemicals">Chemicals</option>
+        <option class="dropdown-item" value="CapitalGoods">CapitalGoods</option>
+        <option class="dropdown-item" value="IT">IT</option>
+        </select>
+   <div class="invalid-feedback">
+    <div  *ngIf="uotype.invalid && (uotype.dirty||uotype.touched) && uotype.errors?.required" >
+    Organization Type Required
+  </div>
+   </div>
+  </div>
+
+
+     <br>
+  
+  
+  
+     <div class="container">
+     
+      
+      
+     
+  
+  <button type="submit" value ="Save details"  class="btn btn-primary btn-lg" [disabled]="!myForm.valid" style="margin-left:420px;">
+    Save
+    </button>
+  <button class="btn btn-primary btn-lg" (click)="NextDoc()" style="margin-left:130px;">Next</button>
+  
+</div>
+
+  </form>
+
+</div>

@@ -1,0 +1,57 @@
+
+<!-- <p>admin works!</p> -->
+ <h1>Application Requests</h1>
+ 
+         
+        <!-- <table  class="table ">
+            <thead style="color: blue;">
+                <th>Application ID</th>
+                <th>Customer ID</th>
+                <th>Property Name</th>
+                <th>Property Location</th>
+                <th>Loan Amount</th>
+                <th>Loan Status</th>
+            </thead>
+            <tr *ngFor="let ap of app1">
+               <td>{{ap.applicationid}}</td>
+               <td>{{ap.custid}}</td>
+               <td>{{ap.propertyname}}</td>
+               <td>{{ap.propertylocation}}</td>
+               <td>{{ap.estimatedamount}}</td>
+               <td>{{ap.loanstatus}}</td>
+               <td> <button class="btn btn-success"  style="color:green" (click)="CreateAccount()" >Approve</button></td>
+               <td> <button class="btn btn-failure"  (click)="deleteRow(ap.applicationid)" style="color:red">Reject</button></td>
+            </tr>
+
+        </table> -->
+
+
+<table  class="table table-success">
+        <thead>
+            <tr>
+              <th >Application Id</th>
+              <th >Customer Id</th>
+              <th >Property Name</th>
+              <th >Property Location</th>
+              <th >Loan Amount</th>
+              <th >Loan Status</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr  *ngFor="let ap of app1">
+                  <td>{{ap.applicationid}}</td>
+                  <td>{{ap.custid}}</td>
+                  <td>{{ap.propertyname}}</td>
+                  <td>{{ap.propertylocation}}</td>
+                  <td>{{ap.estimatedamount}}</td>
+                  <td>{{ap.loanstatus}}</td>
+                  <td> <button (click)="CreateAccount(ap)" class="btn btn-primary btn-lg" >Approve</button></td>
+                  <td> <button (click)="deleteRow(ap.applicationid)" class="btn btn-danger btn-lg">Reject</button></td>
+                  </tr>
+                  
+            
+              
+             
+          </tbody>
+        </table>
+   

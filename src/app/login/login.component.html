@@ -1,0 +1,52 @@
+
+<div class="bimage1">
+ <div class="container">
+ <h2 style="font-weight: bold;"> Login </h2>
+  
+       <form #login ="ngForm" (ngSubmit)="loginForm()" novalidate>
+           <table>
+             <tr>
+               <td style="color:black; font-size: 2vw;font-weight: bold;">Customer ID</td>
+               <td ><input type="text" name="customerid" id="customerid" required [(ngModel)]="customerid"></td>
+               </tr>
+               <br>
+               <tr>
+               <td style="color:black; font-size: 2vw;font-weight: bold;">Password</td>
+               <td><input type="password" name="password" id="password" required [(ngModel)]="password"></td>
+               </tr>
+               <br>
+               <tr>
+               <td></td>
+               <br>
+               <br>
+               <br>
+               <br>
+               <button type="submit" [disabled]="!login.valid" class="btn btn-success btn-lg" (click)="loginForm()" > Login</button>
+              <button type="submit"  class="btn btn-primary btn-lg" (click)="Admin()" > Admin</button>
+             </tr>
+           </table>
+         </form> 
+ </div>  
+ </div>
+
+ <!-- <div class="mt-4 text-left">
+  <div>
+      <select [(ngModel)]="role" class="from-select,form-group mx-sm-3 mb-2">
+          <option value="student">Customer</option>
+          <option value="admin">Admin</option>
+      </select>
+  </div>
+  
+<div class="form-group mx-sm-3 mb-2">
+<label for="inputUserId" class="sr-only">User ID</label>
+<input type="text" class="form-control" [(ngModel)]="loginid" placeholder="Id">
+</div>
+
+<div class="form-group mx-sm-3 mb-2">
+<label for="inputPassword2" class="sr-only">Password</label>
+<input type="password" class="form-control" [(ngModel)]="password" placeholder="Password">
+</div>
+
+<div>
+<button (click)="validateLogin()">Login</button>
+</div> -->

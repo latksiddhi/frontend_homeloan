@@ -1,0 +1,111 @@
+<!-- <p>show-account works!</p>
+<div class="container"></div> -->
+    <!-- <table>
+        <tr>
+            <td>Enter Account ID <input type="text" [(ngModel)]="accountid"><button (click)="findAccount()">Search</button> </td>  </tr>
+         
+    </table> 
+<table  class="table">
+    <thead style="color: blue;">
+        <th>Loan ID</th>
+        <th>Applcation ID</th>
+        <th>IFSC Code</th>
+        <th>Loan Amount</th>
+        <th>Account Balance</th>
+    </thead>
+    <tr *ngFor="let a of ax1">
+       <td>{{a.loanid}}</td>
+       <td>{{a.applicationid}}</td>
+       <td>{{a.ifsccode}}</td>
+       <td>{{a.loanamount}}</td>
+       <td>{{a.accountbalance}}</td>
+    </tr>
+</table> -->
+
+<div class="container">
+  <form #accountForm ="ngForm" (ngSubmit)="saveData()" novalidate>
+    <hr/>
+    <br/>
+          <p>
+          <label for="applicationid">Application ID</label>
+          <input type="number" id="applicationid" name="applicationid" required   [(ngModel)]="account.applicationid">
+          <p>
+          <p>
+          <label for="loanamount">Loan Amount</label>
+          <input type="number" id="loanamount" name="loanamount" required   [(ngModel)]="account.loanamount">
+          <p>
+          <p>
+          <label for=" interestrate">Interest Rate</label>
+          <input type="number" id=" interestrate" name=" interestrate" required   [(ngModel)]="account.interestrate">
+          <p>
+          <p>
+          <label for="pendingamount"> Pending Amount</label>
+          <input type="number" id="pendingamount" name="pendingamount" required   [(ngModel)]="account.loanamount">
+          <p>
+         <p>
+          <label for="startdate">Start Date</label>
+          <input type="date" id="startdate" name="startdate" required   [(ngModel)]="account.startdate">
+          <p>
+          <p>
+          <label for="enddate">End Date</label>
+          <input type="date" id="enddate" name="enddate" required   [(ngModel)]="account.enddate">
+          <p>
+          <p>
+          <label for="ifsccode">IFSC Code</label>
+          <input type="text" id="ifsccode" name="ifsccode" required   [(ngModel)]="account.ifsccode">
+          <p>
+          <p>
+          <label for="accountbalance">Account Balance</label>
+          <input type="number" id="accountbalance" name="accountbalance" required [(ngModel)]="account.loanamount">
+          <p>
+          <p>
+          
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    
+     
+      </form>
+  </div>
+
+
+
+  <!-- <div class="container">
+    <form #accountForm ="ngForm" (ngSubmit)="saveData()" novalidate>
+      <h2>Account Details</h2>
+      <hr/>
+           <br/>
+           <p>
+           <label for="applicationid">Application ID</label>
+           <input type="number" id="applicationid" name="applicationid" required   [(ngModel)]="account.applicationid">
+           <p>
+          <p>     
+            <label for="loanamount">Loan Amount</label>
+            <input type="number" id="loanamount" name="loanamount" required   [(ngModel)]="account.loanamount">
+            <p>
+            <p> 
+            <label for=" interestrate">Interest Rate</label>
+            <input type="number" id=" interestrate" name=" interestrate" required   [(ngModel)]="account.interestrate">
+            <p>
+            <p>
+            <label for="pendingamount"> Pending Amount</label>
+            <input type="number" id="pendingamount" name="pendingamount" required   [(ngModel)]="account.pendingamount">
+            <p>
+            <p>
+            <label for="startdate">Start Date</label>
+           <input type="date" id="startdate" name="startdate" required   [(ngModel)]="account.startdate">
+           <p>
+           <p> 
+           <label for="enddate">End Date</label>
+           <input type="date" id="enddate" name="enddate" required   [(ngModel)]="account.enddate">
+          <p>
+          <p> 
+          <label for="ifsccode">IFSC Code</label>
+          <input type="text" id="ifsccode" name="ifsccode" required   [(ngModel)]="account.ifsccode">
+          <p>
+          <p> 
+          <label for="accountbalance">Account Balance</label>
+          <input type="number" id="accountbalance" name="accountbalance" required [(ngModel)]="account.loanamount">
+          <p>
+          <p> 
+          <button type="button"  class="btn btn-primary" >Sumbit</button>
+        </form>
+    </div> -->

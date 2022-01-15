@@ -1,0 +1,18 @@
+<div class="container">
+    <form #loan ="ngForm" (ngSubmit)="loanStatus()" novalidate>
+        <br>
+        <br>
+        <br>
+        <div style="font-weight: bolder; font-size: 2vw;" >Application ID</div>
+        <br>
+        <input type="number" name="applicationid" id="applicationid" required [(ngModel)]="applicationid">
+      <br>
+      <br>  
+       <button type="submit" [disabled]="!loan.valid" class="btn btn-primary btn-lg">Track</button>  
+    </form>
+
+    <h3><br>Application Status: {{status}}</h3>
+</div>
+  
+  
+

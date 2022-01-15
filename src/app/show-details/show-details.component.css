@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 12%;
+  height: 120px;
+  background-color:#66D3FA;
+
+}
+
+div {
+  margin-left: 30px;
+  margin-right: 40px;
+}
+
+#fname{
+  margin-bottom: 20px;
+}
+
+#nation{
+  margin-bottom: 10px;
+}

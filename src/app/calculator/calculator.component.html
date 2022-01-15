@@ -1,0 +1,82 @@
+
+<div class="bimage1">
+
+    <div class="radio"> 
+        <h2>Calculator</h2> 
+       
+        <br/>
+        <p>
+        <label>  
+            <input style="color:black; font-size: 2vw;font-weight: bold;"  type="radio" name="RB" value="calForm" (click)="setradio('calForm')" [checked]='true' ngModel>  
+           Eligibility Calculator  
+        </label>  
+    
+        </div>  
+        
+    <div class="radio">  
+     <label>  
+            <input style="color:black; font-size: 2vw;font-weight: bold;" type="radio" name="RB" value="EMIForm"  (click)="setradio('EMIForm')"  ngModel>  
+            EMI Calculator 
+        </label>  
+    </div>
+    
+    <div class="container">
+    <div *ngIf="isSelected('calForm')"> 
+    <form #calForm ="ngForm" (ngSubmit)="formSubmit(calForm)" novalidate>
+            <table>
+                <tr>
+                   <td style="color:black; font-size: 2vw;font-weight: bold;" > Monthly Income</td>
+                   <td> <input  type="number" id="m_income" name="m_income" [(ngModel)]="income" ></td>
+                </tr>
+                <br>
+                <tr>
+                   <td style="color:black; font-size: 2vw;font-weight: bold;" >ROI</td>
+                    <td><input  type="number" id="roi" name="roi" [(ngModel)]="rate"></td>
+                </tr>
+                <br>
+                <tr>
+                   <td style="color:black; font-size: 2vw;font-weight: bold;" >Calculate</td> 
+                   <td><button type="submit" class="btn btn-primary btn-lg" (click)="calculate()">Calculate</button></td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="color:black; font-size: 2vw;font-weight: bold;" >Eligible Loan Amount</td>
+                   <td> <input  type="number" [value]=loan></td>
+                </tr>
+            </table>
+        </form>
+    </div> 
+    
+    <div *ngIf="isSelected('EMIForm')" >
+        <form #EMIForm ="ngForm" (ngSubmit)="formSubmit1(EMIForm)" novalidate>
+            <table>
+                
+                <tr>
+                    <td style="color:black; font-size: 2vw;font-weight: bold;" >Loan</td>
+                    <td><input type="number" name="loan" id="loan" [(ngModel)]="principle"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="color:black; font-size: 2vw;font-weight: bold;" >Tenure</td>
+                    <td><input type="number" name="tenure" id="tenure" [(ngModel)]="time"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="color:black; font-size: 2vw;font-weight: bold;" >ROI</td>
+                    <td><input type="text" name="roi"  id="roi" [(ngModel)]="r"></td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="color:black; font-size: 2vw;font-weight: bold;" >Calculate</td>
+                    <td><button type="submit" class="btn btn-primary btn-lg" (click)="calculateEMI()">Calculate</button></td>
+                </tr>
+                <br>
+                <tr>
+                    <td style="color:black; font-size: 2vw;font-weight: bold;" >EMI</td>
+                    <td><input type="number" name="emi" id="emi" [value]=Emi></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    </div>
+    </div>

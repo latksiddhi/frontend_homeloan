@@ -1,0 +1,52 @@
+.container{
+    width: 500px;
+    height: 320px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-items: left;
+    }
+    .container input{
+        border-style: solid;
+        width:300px;
+        
+    }
+    .container button{
+        width: 110px;
+        margin: 10px;
+    }
+    .logo{
+        text-align: center;
+        font-size: x-large;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+    }
+    .button{
+        text-align:left;
+        border: 40px;
+    }
+    h2{
+        text-align: center;
+        font-weight: bold;
+        padding-left: 100px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 12%;
+        height: 120px;
+        background-color:#66D3FA;
+    } 
+
+    .bimage1 {
+        background-image: url("https://image.shutterstock.com/image-photo/home-loan-reverse-mortgage-saving-260nw-1219076071.jpg"); 
+        background-color: #cccccc; 
+        background-position:centre;
+        background-repeat: no-repeat; 
+        background-size: 1600px 400px; 
+        margin: auto;
+       
+      }
+   
+      h2{
+          color: black;
+      }

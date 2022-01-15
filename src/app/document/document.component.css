@@ -1,0 +1,40 @@
+.container{
+    width: 350px;
+    height: 460px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .container input{
+        border-style:solid;
+        width:300px;   
+    }
+    .container button{
+        width: 310px;
+    }
+    .button{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 12%;
+        height: 120px;
+        background-color:#66D3FA;
+    }
+    .bimage1 {
+        background-image: url("https://www.rocketlawyer.com/blog/wp-content/uploads/2016/01/ThinkstockPhotos-452421227-c.jpg"); 
+        background-color: #cccccc;
+        background-position:centre;
+        background-repeat: no-repeat;
+        background-size: 1600px 600px; 
+        margin: auto;
+      }
+
+      .space
+      {
+        height: 600px;
+        width: auto;
+      }

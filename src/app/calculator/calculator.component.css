@@ -1,0 +1,35 @@
+.container{
+
+
+    width: 400px;
+    height: 300px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    
+    }
+    .container input{
+       
+        width:200px;
+        
+    }
+    .container button{
+        width:200px;
+    }
+    .button{
+        text-align:left;
+    }
+    h2{
+        text-align: center;
+    }
+
+    .bimage1 {
+        background-image: url("https://previews.123rf.com/images/pookgreen/pookgreen1501/pookgreen150100256/35714761-number-keypad-of-a-calculator-on-white-background.jpg"); /* The image used */
+        background-color: #cccccc; /* Used if the image is unavailable */
+        /* You must set a specified height */
+       
+        background-position:centre; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: 1600px 450px; /* Resize the background image to cover the entire container */
+        margin: auto;
+       
+      }

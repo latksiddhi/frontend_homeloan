@@ -1,0 +1,20 @@
+
+
+<form #login ="ngForm" (ngSubmit)="Adminlogin()" novalidate>
+    <table>
+      <tr>
+        <td>Admin ID</td>
+        <td><input type="text" name="adminid" id="adminid" required [(ngModel)]="adminid"></td>
+        </tr>
+        <br>
+        <tr>
+        <td>Password</td>
+        <td><input type="password" name="password" id="password" required [(ngModel)]="pass"></td>
+        </tr>
+        <br>
+        <tr>
+        <td></td>
+        <button type="submit" [disabled]="!login.valid" class="btn btn-primary btn-lg" (click)="Adminlogin()" >Admin Login</button>
+      </tr>
+    </table>
+  </form> 
